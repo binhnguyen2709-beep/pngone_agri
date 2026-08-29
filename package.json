@@ -1,0 +1,18 @@
+{
+  "name": "pngone-website",
+  "version": "1.0.0",
+  "description": "PNG ONE Co., Ltd - Vietnamese agricultural export website",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/styles.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/css/styles.css --watch",
+    "serve": "python -m http.server 5500"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

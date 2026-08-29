@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-primary-50 text-ink-800 font-body antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-heading text-ink-900;
+  }
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-primary-700;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply max-w-8xl mx-auto px-5 sm:px-8 lg:px-12;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 cursor-pointer min-h-[44px];
+  }
+  .btn-primary {
+    @apply btn bg-gold-600 text-white hover:bg-gold-700 shadow-soft hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply btn border-2 border-white/70 text-white hover:bg-white hover:text-primary-800;
+  }
+  .btn-outline-dark {
+    @apply btn border-2 border-primary-700 text-primary-800 hover:bg-primary-700 hover:text-white;
+  }
+  .section {
+    @apply py-16 sm:py-24;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-primary-700;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-primary-100/70;
+  }
+  .reveal {
+    opacity: 0;
+  }
+  .reveal.in-view {
+    @apply animate-fade-up;
+  }
+  .nav-link {
+    @apply text-sm font-semibold text-ink-700 hover:text-primary-700 transition-colors;
+  }
+  .lang-btn {
+    @apply px-2.5 py-1 text-xs font-bold rounded-full transition-colors cursor-pointer;
+  }
+  .lang-btn[data-active="true"] {
+    @apply bg-primary-700 text-white;
+  }
+  .lang-btn[data-active="false"] {
+    @apply text-ink-500 hover:text-primary-700;
+  }
+  .filter-btn {
+    @apply rounded-full border px-4 py-2 text-sm font-semibold transition-colors cursor-pointer whitespace-nowrap;
+  }
+  .filter-btn[data-active="true"] {
+    @apply bg-primary-700 border-primary-700 text-white;
+  }
+  .filter-btn[data-active="false"] {
+    @apply bg-white border-primary-200 text-ink-700 hover:border-primary-500 hover:text-primary-700;
+  }
+  .stat-card {
+    @apply text-center;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-primary-100 text-primary-800 px-3 py-1 text-xs font-bold;
+  }
+}
