@@ -5,6 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-size: 112.5%;
   }
   body {
     @apply bg-primary-50 text-ink-800 font-body antialiased;
