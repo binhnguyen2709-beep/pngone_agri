@@ -43,8 +43,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ["Poppins", "sans-serif"],
-        body: ["Open Sans", "sans-serif"],
+        heading: ["Cormorant", "serif"],
+        body: ["Montserrat", "sans-serif"],
       },
       boxShadow: {
         soft: "0 4px 24px -4px rgba(15, 23, 42, 0.08)",
