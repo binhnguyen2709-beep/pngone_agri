@@ -39,6 +39,7 @@ jobs:
             **/.claude/**
             package.json
             package-lock.json
+            server.js
             tailwind.config.js
             README.md
             .gitignore

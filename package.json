@@ -6,7 +6,8 @@
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/styles.css --minify",
     "watch:css": "tailwindcss -i ./src/input.css -o ./assets/css/styles.css --watch",
-    "serve": "python -m http.server 5500"
+    "serve": "python -m http.server 5500",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,8 @@
   "type": "commonjs",
   "devDependencies": {
     "tailwindcss": "^3.4.19"
+  },
+  "dependencies": {
+    "express": "^4.22.2"
   }
 }
