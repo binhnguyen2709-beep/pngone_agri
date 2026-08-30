@@ -114,6 +114,23 @@
       });
     }
 
+    /* Product photo galleries */
+    document.querySelectorAll("[data-gallery]").forEach(function (gallery) {
+      var main = gallery.querySelector("[data-gallery-main]");
+      var thumbs = gallery.querySelectorAll("[data-gallery-thumb]");
+      thumbs.forEach(function (thumb) {
+        thumb.addEventListener("click", function () {
+          if (main) main.src = thumb.getAttribute("data-src");
+          thumbs.forEach(function (t) {
+            t.classList.remove("ring-2", "ring-primary-600", "opacity-100");
+            t.classList.add("opacity-60");
+          });
+          thumb.classList.remove("opacity-60");
+          thumb.classList.add("ring-2", "ring-primary-600", "opacity-100");
+        });
+      });
+    });
+
     /* Category filter (products page) */
     var filterButtons = document.querySelectorAll("[data-filter]");
     if (filterButtons.length) {
