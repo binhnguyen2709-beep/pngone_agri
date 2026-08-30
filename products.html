@@ -103,11 +103,8 @@
 <section class="sticky top-20 z-20 bg-primary-50/95 backdrop-blur border-b border-primary-100 py-4">
   <div class="container-page flex flex-wrap items-center gap-2.5" role="group" aria-label="Filter products by category" data-filter-buttons>
     <button type="button" class="filter-btn" data-filter="all" data-active="true" data-en="All Products" data-vi="Tất cả sản phẩm">All Products</button>
-    <button type="button" class="filter-btn" data-filter="grains" data-active="false" data-en="Grains" data-vi="Ngũ cốc">Grains</button>
-    <button type="button" class="filter-btn" data-filter="nuts" data-active="false" data-en="Beans &amp; Nuts" data-vi="Hạt &amp; Đậu">Beans &amp; Nuts</button>
-    <button type="button" class="filter-btn" data-filter="fruit" data-active="false" data-en="Fresh Fruit" data-vi="Trái cây tươi">Fresh Fruit</button>
-    <button type="button" class="filter-btn" data-filter="spices" data-active="false" data-en="Tea &amp; Spices" data-vi="Trà &amp; Gia vị">Tea &amp; Spices</button>
-    <button type="button" class="filter-btn" data-filter="processed" data-active="false" data-en="Dried &amp; Powder" data-vi="Sấy &amp; Bột">Dried &amp; Powder</button>
+    <button type="button" class="filter-btn" data-filter="vn" data-active="false" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</button>
+    <button type="button" class="filter-btn" data-filter="intl" data-active="false" data-en="International Sourcing &amp; Trading" data-vi="Thu mua &amp; Kinh doanh quốc tế">International Sourcing &amp; Trading</button>
   </div>
 </section>
 
@@ -115,7 +112,9 @@
 <section class="section">
   <div class="container-page grid md:grid-cols-2 gap-6">
 
-    <article id="rice" data-category="grains" class="card p-7 scroll-mt-40 reveal">
+    <h2 class="md:col-span-2 text-2xl sm:text-3xl font-heading font-bold mt-2" data-category="vn" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</h2>
+
+    <article id="rice" data-category="vn" class="card p-7 scroll-mt-40 reveal">
       <div class="mb-5" data-gallery>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-primary-50">
           <img src="assets/img/products/rice-1.jpg" alt="Rice" class="h-full w-full object-cover" data-gallery-main>
@@ -129,7 +128,7 @@
       </div>
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-grain"/></svg></span>
-        <span class="badge" data-en="Grains" data-vi="Ngũ cốc">Grains</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Rice" data-vi="Gạo">Rice</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Fragrant and white rice varieties grown across the Mekong Delta, milled and graded to buyer specification." data-vi="Các giống gạo thơm và gạo trắng được trồng tại Đồng bằng sông Cửu Long, xay xát và phân loại theo yêu cầu khách hàng.">Fragrant and white rice varieties grown across the Mekong Delta, milled and graded to buyer specification.</p>
@@ -141,7 +140,7 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="corn" data-category="grains" class="card p-7 scroll-mt-40 reveal" data-delay="30ms">
+    <article id="corn" data-category="vn" class="card p-7 scroll-mt-40 reveal" data-delay="30ms">
       <div class="mb-5" data-gallery>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-primary-50">
           <img src="assets/img/products/corn-1.jpg" alt="Corn" class="h-full w-full object-cover" data-gallery-main>
@@ -154,7 +153,7 @@
       </div>
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-grain"/></svg></span>
-        <span class="badge" data-en="Grains" data-vi="Ngũ cốc">Grains</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Corn" data-vi="Ngô">Corn</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Dried corn kernels sourced from Vietnam's grain-growing regions, cleaned and graded for export." data-vi="Ngô hạt khô thu mua từ các vùng trồng ngũ cốc của Việt Nam, được làm sạch và phân loại xuất khẩu.">Dried corn kernels sourced from Vietnam's grain-growing regions, cleaned and graded for export.</p>
@@ -166,7 +165,7 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="coffee" data-category="nuts" class="card p-7 scroll-mt-40 reveal" data-delay="60ms">
+    <article id="coffee" data-category="vn" class="card p-7 scroll-mt-40 reveal" data-delay="60ms">
       <div class="mb-5" data-gallery>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-primary-50">
           <img src="assets/img/products/coffee-2.jpg" alt="Coffee" class="h-full w-full object-cover" data-gallery-main>
@@ -180,7 +179,7 @@
       </div>
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-coffee"/></svg></span>
-        <span class="badge" data-en="Beans &amp; Nuts" data-vi="Hạt &amp; Đậu">Beans &amp; Nuts</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Coffee" data-vi="Cà phê">Coffee</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Green coffee beans from the Central Highlands, sorted for consistent size, moisture, and defect count." data-vi="Cà phê nhân xanh từ Tây Nguyên, được phân loại đồng đều về kích cỡ, độ ẩm và tỷ lệ lỗi.">Green coffee beans from the Central Highlands, sorted for consistent size, moisture, and defect count.</p>
@@ -192,7 +191,7 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="cashew" data-category="nuts" class="card p-7 scroll-mt-40 reveal" data-delay="120ms">
+    <article id="cashew" data-category="vn" class="card p-7 scroll-mt-40 reveal" data-delay="120ms">
       <div class="mb-5" data-gallery>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-primary-50">
           <img src="assets/img/products/cashew-1.jpg" alt="Cashew Nuts" class="h-full w-full object-cover" data-gallery-main>
@@ -210,7 +209,7 @@
       </div>
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-cashew"/></svg></span>
-        <span class="badge" data-en="Beans &amp; Nuts" data-vi="Hạt &amp; Đậu">Beans &amp; Nuts</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Cashew Nuts" data-vi="Hạt điều">Cashew Nuts</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Processed cashew kernels, one of Vietnam's leading export categories, roasted or raw on request." data-vi="Nhân hạt điều đã qua chế biến — một trong những nhóm hàng xuất khẩu chủ lực của Việt Nam, có thể rang hoặc để sống theo yêu cầu.">Processed cashew kernels, one of Vietnam's leading export categories, roasted or raw on request.</p>
@@ -222,7 +221,7 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="pepper" data-category="spices" class="card p-7 scroll-mt-40 reveal" data-delay="180ms">
+    <article id="pepper" data-category="vn" class="card p-7 scroll-mt-40 reveal" data-delay="180ms">
       <div class="mb-5" data-gallery>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-primary-50">
           <img src="assets/img/products/pepper-1.jpg" alt="Black Pepper" class="h-full w-full object-cover" data-gallery-main>
@@ -237,7 +236,7 @@
       </div>
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-spice"/></svg></span>
-        <span class="badge" data-en="Tea &amp; Spices" data-vi="Trà &amp; Gia vị">Tea &amp; Spices</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Black &amp; White Pepper" data-vi="Hồ tiêu đen &amp; trắng">Black &amp; White Pepper</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Vietnam is the world's largest pepper exporter; our supply is sourced from leading growing provinces." data-vi="Việt Nam là quốc gia xuất khẩu hồ tiêu lớn nhất thế giới; nguồn hàng của chúng tôi được thu mua từ các tỉnh trọng điểm.">Vietnam is the world's largest pepper exporter; our supply is sourced from leading growing provinces.</p>
@@ -249,7 +248,7 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="dragonfruit" data-category="fruit" class="card p-7 scroll-mt-40 reveal">
+    <article id="dragonfruit" data-category="vn" class="card p-7 scroll-mt-40 reveal">
       <div class="mb-5" data-gallery>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-primary-50">
           <img src="assets/img/products/dragonfruit-2.jpg" alt="Dragon Fruit" class="h-full w-full object-cover" data-gallery-main>
@@ -262,7 +261,7 @@
       </div>
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-fruit"/></svg></span>
-        <span class="badge" data-en="Fresh Fruit" data-vi="Trái cây tươi">Fresh Fruit</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Dragon Fruit" data-vi="Thanh long">Dragon Fruit</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Fresh red and white-flesh dragon fruit, cold-chain packed for air and reefer sea freight." data-vi="Thanh long ruột đỏ và ruột trắng tươi, đóng gói theo chuỗi lạnh cho vận chuyển hàng không và container lạnh đường biển.">Fresh red and white-flesh dragon fruit, cold-chain packed for air and reefer sea freight.</p>
@@ -274,7 +273,7 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="mango" data-category="fruit" class="card p-7 scroll-mt-40 reveal" data-delay="60ms">
+    <article id="mango" data-category="vn" class="card p-7 scroll-mt-40 reveal" data-delay="60ms">
       <div class="mb-5" data-gallery>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-primary-50">
           <img src="assets/img/products/mango-1.jpg" alt="Mango" class="h-full w-full object-cover" data-gallery-main>
@@ -287,7 +286,7 @@
       </div>
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-fruit"/></svg></span>
-        <span class="badge" data-en="Fresh Fruit" data-vi="Trái cây tươi">Fresh Fruit</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Mango" data-vi="Xoài">Mango</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Fresh and dried mango from the Mekong Delta, prized for sweetness and consistent ripening." data-vi="Xoài tươi và xoài sấy từ Đồng bằng sông Cửu Long, nổi bật với độ ngọt và độ chín đồng đều.">Fresh and dried mango from the Mekong Delta, prized for sweetness and consistent ripening.</p>
@@ -299,7 +298,7 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="banana" data-category="fruit" class="card p-7 scroll-mt-40 reveal" data-delay="180ms">
+    <article id="banana" data-category="vn" class="card p-7 scroll-mt-40 reveal" data-delay="180ms">
       <div class="mb-5" data-gallery>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-primary-50">
           <img src="assets/img/products/banana-1.jpg" alt="Banana" class="h-full w-full object-cover" data-gallery-main>
@@ -317,7 +316,7 @@
       </div>
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-fruit"/></svg></span>
-        <span class="badge" data-en="Fresh Fruit" data-vi="Trái cây tươi">Fresh Fruit</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Banana" data-vi="Chuối">Banana</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Fresh Vietnamese banana, harvested at export-ready maturity and packed for steady ripening in transit." data-vi="Chuối tươi Việt Nam, thu hoạch đúng độ chín xuất khẩu và đóng gói để chín đều trong quá trình vận chuyển.">Fresh Vietnamese banana, harvested at export-ready maturity and packed for steady ripening in transit.</p>
@@ -329,7 +328,7 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="passionfruit" data-category="fruit" class="card p-7 scroll-mt-40 reveal">
+    <article id="passionfruit" data-category="vn" class="card p-7 scroll-mt-40 reveal">
       <div class="mb-5" data-gallery>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-primary-50">
           <img src="assets/img/products/passion-fruit-1.jpg" alt="Passion Fruit" class="h-full w-full object-cover" data-gallery-main>
@@ -347,7 +346,7 @@
       </div>
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-fruit"/></svg></span>
-        <span class="badge" data-en="Fresh Fruit" data-vi="Trái cây tươi">Fresh Fruit</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Passion Fruit" data-vi="Chanh dây">Passion Fruit</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Fresh passion fruit prized for its aromatic pulp, sourced from Vietnam's Central Highlands growing regions." data-vi="Chanh dây tươi nổi bật với phần thịt quả thơm, thu mua từ các vùng trồng Tây Nguyên.">Fresh passion fruit prized for its aromatic pulp, sourced from Vietnam's Central Highlands growing regions.</p>
@@ -359,7 +358,7 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="lime" data-category="fruit" class="card p-7 scroll-mt-40 reveal" data-delay="60ms">
+    <article id="lime" data-category="vn" class="card p-7 scroll-mt-40 reveal" data-delay="60ms">
       <div class="mb-5" data-gallery>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-primary-50">
           <img src="assets/img/products/seedless-lime-1.jpg" alt="Seedless Lime" class="h-full w-full object-cover" data-gallery-main>
@@ -373,7 +372,7 @@
       </div>
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-fruit"/></svg></span>
-        <span class="badge" data-en="Fresh Fruit" data-vi="Trái cây tươi">Fresh Fruit</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Seedless Lime" data-vi="Chanh không hạt">Seedless Lime</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Fresh seedless lime with high juice content, popular with food-service and beverage buyers." data-vi="Chanh không hạt tươi, nhiều nước, được các khách hàng dịch vụ thực phẩm và đồ uống ưa chuộng.">Fresh seedless lime with high juice content, popular with food-service and beverage buyers.</p>
@@ -385,7 +384,7 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="other-fruit" data-category="fruit" class="card p-7 scroll-mt-40 reveal" data-delay="120ms">
+    <article id="other-fruit" data-category="vn" class="card p-7 scroll-mt-40 reveal" data-delay="120ms">
       <div class="mb-5" data-gallery>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-primary-50">
           <img src="assets/img/products/other-fruit-1.jpg" alt="Other Fresh Fruit" class="h-full w-full object-cover" data-gallery-main>
@@ -400,7 +399,7 @@
       </div>
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-fruit"/></svg></span>
-        <span class="badge" data-en="Fresh Fruit" data-vi="Trái cây tươi">Fresh Fruit</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Other Fresh Fruit" data-vi="Trái cây tươi khác">Other Fresh Fruit</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="A wide range of Vietnam's seasonal tropical fruit, harvested to order and packed for air or sea freight." data-vi="Đa dạng các loại trái cây nhiệt đới theo mùa của Việt Nam, thu hoạch theo đơn hàng và đóng gói cho vận chuyển hàng không lẫn đường biển.">A wide range of Vietnam's seasonal tropical fruit, harvested to order and packed for air or sea freight.</p>
@@ -412,10 +411,10 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="tea" data-category="spices" class="card p-7 scroll-mt-40 reveal" data-delay="120ms">
+    <article id="tea" data-category="vn" class="card p-7 scroll-mt-40 reveal" data-delay="120ms">
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-leaf"/></svg></span>
-        <span class="badge" data-en="Tea &amp; Spices" data-vi="Trà &amp; Gia vị">Tea &amp; Spices</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Tea" data-vi="Trà">Tea</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Green, black and oolong tea from Vietnam's northern highland tea regions." data-vi="Trà xanh, trà đen và trà ô long từ các vùng cao nguyên phía Bắc Việt Nam.">Green, black and oolong tea from Vietnam's northern highland tea regions.</p>
@@ -427,10 +426,10 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="spices" data-category="spices" class="card p-7 scroll-mt-40 reveal" data-delay="180ms">
+    <article id="spices" data-category="vn" class="card p-7 scroll-mt-40 reveal" data-delay="180ms">
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-spice"/></svg></span>
-        <span class="badge" data-en="Tea &amp; Spices" data-vi="Trà &amp; Gia vị">Tea &amp; Spices</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Cinnamon &amp; Spices" data-vi="Quế &amp; Gia vị">Cinnamon &amp; Spices</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Vietnamese cinnamon, star anise, ginger and chili, valued internationally for high essential-oil content and flavor intensity." data-vi="Quế, hồi, gừng và ớt Việt Nam, được thị trường quốc tế đánh giá cao nhờ hàm lượng tinh dầu cao và hương vị đậm đà.">Vietnamese cinnamon, star anise, ginger and chili, valued internationally for high essential-oil content and flavor intensity.</p>
@@ -442,7 +441,7 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="dried-fruit" data-category="processed" class="card p-7 scroll-mt-40 reveal">
+    <article id="dried-fruit" data-category="vn" class="card p-7 scroll-mt-40 reveal">
       <div class="mb-5" data-gallery>
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-primary-50">
           <img src="assets/img/products/dried-fruit-1.jpg" alt="Dried Fruit" class="h-full w-full object-cover" data-gallery-main>
@@ -461,7 +460,7 @@
       </div>
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-fruit"/></svg></span>
-        <span class="badge" data-en="Dried &amp; Powder" data-vi="Sấy &amp; Bột">Dried &amp; Powder</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Dried Fruit" data-vi="Trái cây sấy">Dried Fruit</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Naturally dried and vacuum-fried fruit snacks, popular with retail and food-service buyers for long shelf life." data-vi="Trái cây sấy khô tự nhiên và sấy chân không, được khách hàng bán lẻ và dịch vụ thực phẩm ưa chuộng nhờ hạn sử dụng dài.">Naturally dried and vacuum-fried fruit snacks, popular with retail and food-service buyers for long shelf life.</p>
@@ -473,10 +472,10 @@
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
 
-    <article id="powder" data-category="processed" class="card p-7 scroll-mt-40 reveal" data-delay="60ms">
+    <article id="powder" data-category="vn" class="card p-7 scroll-mt-40 reveal" data-delay="60ms">
       <div class="flex items-start justify-between gap-4">
         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-leaf"/></svg></span>
-        <span class="badge" data-en="Dried &amp; Powder" data-vi="Sấy &amp; Bột">Dried &amp; Powder</span>
+        <span class="badge" data-en="Vietnam Agricultural Products" data-vi="Nông sản Việt Nam">Vietnam Agricultural Products</span>
       </div>
       <h2 class="mt-4 text-xl font-heading font-bold" data-en="Vegetable &amp; Fruit Powder" data-vi="Bột rau củ &amp; trái cây">Vegetable &amp; Fruit Powder</h2>
       <p class="mt-2 text-sm text-ink-600" data-en="Spray-dried and freeze-dried powders made from Vietnamese fruit and vegetables, for food, beverage and supplement applications." data-vi="Bột sấy phun và sấy lạnh sản xuất từ rau củ và trái cây Việt Nam, ứng dụng trong thực phẩm, đồ uống và thực phẩm chức năng.">Spray-dried and freeze-dried powders made from Vietnamese fruit and vegetables, for food, beverage and supplement applications.</p>
@@ -484,6 +483,44 @@
         <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Applications: Food, beverage and supplement manufacturing" data-vi="Ứng dụng: Sản xuất thực phẩm, đồ uống và thực phẩm chức năng">Applications: Food, beverage and supplement manufacturing</span></li>
         <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Packaging: Foil-lined bags, drums, custom formats" data-vi="Đóng gói: Bao lót màng bạc, thùng phuy, quy cách theo yêu cầu">Packaging: Foil-lined bags, drums, custom formats</span></li>
         <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="MOQ: Flexible, specifications on request" data-vi="MOQ: Linh hoạt, thông số theo yêu cầu">MOQ: Flexible, specifications on request</span></li>
+      </ul>
+      <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
+    </article>
+
+    <h2 class="md:col-span-2 text-2xl sm:text-3xl font-heading font-bold mt-6" data-category="intl" data-en="International Sourcing &amp; Trading" data-vi="Thu mua &amp; Kinh doanh quốc tế">International Sourcing &amp; Trading</h2>
+
+    <article id="sugar" data-category="intl" class="card p-7 scroll-mt-40 reveal">
+      <div class="flex items-start justify-between gap-4">
+        <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-package"/></svg></span>
+        <span class="badge" data-en="International Sourcing &amp; Trading" data-vi="Thu mua &amp; Kinh doanh quốc tế">International Sourcing &amp; Trading</span>
+      </div>
+      <h2 class="mt-4 text-xl font-heading font-bold" data-en="Refined White Sugar" data-vi="Đường tinh luyện trắng">Refined White Sugar</h2>
+      <p class="mt-2 text-sm text-ink-600" data-en="Available through our trusted Southeast Asian supply network." data-vi="Cung ứng thông qua mạng lưới đối tác đáng tin cậy tại Đông Nam Á.">Available through our trusted Southeast Asian supply network.</p>
+      <ul class="mt-4 space-y-1.5 text-sm text-ink-700">
+        <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Refined White Sugar – ICUMSA 45" data-vi="Đường tinh luyện trắng – ICUMSA 45">Refined White Sugar – ICUMSA 45</span></li>
+        <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Origin: Subject to quotation" data-vi="Xuất xứ: Theo báo giá">Origin: Subject to quotation</span></li>
+        <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Packing: 50 kg bags / Customized" data-vi="Đóng gói: Bao 50kg / Theo yêu cầu">Packing: 50 kg bags / Customized</span></li>
+        <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Shipment: Container load" data-vi="Vận chuyển: Nguyên container">Shipment: Container load</span></li>
+        <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Trade Terms: FOB / CFR / CIF" data-vi="Điều kiện giao dịch: FOB / CFR / CIF">Trade Terms: FOB / CFR / CIF</span></li>
+        <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Contact us for current price &amp; availability" data-vi="Liên hệ để biết giá và nguồn hàng hiện tại">Contact us for current price &amp; availability</span></li>
+      </ul>
+      <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
+    </article>
+
+    <article id="edible-oils" data-category="intl" class="card p-7 scroll-mt-40 reveal" data-delay="60ms">
+      <div class="flex items-start justify-between gap-4">
+        <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 shrink-0"><svg class="h-6 w-6"><use href="#i-globe"/></svg></span>
+        <span class="badge" data-en="International Sourcing &amp; Trading" data-vi="Thu mua &amp; Kinh doanh quốc tế">International Sourcing &amp; Trading</span>
+      </div>
+      <h2 class="mt-4 text-xl font-heading font-bold" data-en="Edible Oils" data-vi="Dầu ăn">Edible Oils</h2>
+      <p class="mt-2 text-sm text-ink-600" data-en="Reliable sourcing solutions through our Southeast Asian supply network." data-vi="Giải pháp thu mua đáng tin cậy thông qua mạng lưới đối tác tại Đông Nam Á.">Reliable sourcing solutions through our Southeast Asian supply network.</p>
+      <ul class="mt-4 space-y-1.5 text-sm text-ink-700">
+        <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Soybean Oil" data-vi="Dầu đậu nành">Soybean Oil</span></li>
+        <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Sunflower Oil" data-vi="Dầu hướng dương">Sunflower Oil</span></li>
+        <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Palm Olein" data-vi="Dầu cọ Olein">Palm Olein</span></li>
+        <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Packing: Retail &amp; Bulk options" data-vi="Đóng gói: Bán lẻ &amp; hàng rời">Packing: Retail &amp; Bulk options</span></li>
+        <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Trade Terms: FOB / CFR / CIF" data-vi="Điều kiện giao dịch: FOB / CFR / CIF">Trade Terms: FOB / CFR / CIF</span></li>
+        <li class="flex gap-2"><svg class="h-4 w-4 text-primary-600 shrink-0 mt-0.5"><use href="#i-check"/></svg><span data-en="Contact us for current price &amp; availability" data-vi="Liên hệ để biết giá và nguồn hàng hiện tại">Contact us for current price &amp; availability</span></li>
       </ul>
       <a href="contact.html#quote" class="btn-outline-dark mt-6 w-full sm:w-auto" data-en="Request Quote" data-vi="Yêu cầu báo giá">Request Quote<svg class="h-4 w-4"><use href="#i-arrow-right"/></svg></a>
     </article>
