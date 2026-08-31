@@ -61,6 +61,17 @@
       });
     }
 
+    /* Hero headline word-by-word reveal */
+    var heroHeadline = document.querySelector("[data-word-reveal]");
+    if (heroHeadline && !prefersReducedMotion) {
+      var words = heroHeadline.textContent.trim().split(/\s+/);
+      heroHeadline.innerHTML = words
+        .map(function (word, i) {
+          return '<span class="word-reveal" style="animation-delay:' + i * 55 + 'ms">' + word + "</span>";
+        })
+        .join(" ");
+    }
+
     /* Animated stat counters */
     var counters = document.querySelectorAll("[data-counter]");
     if (counters.length) {
