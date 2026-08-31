@@ -89,6 +89,33 @@
     opacity: 0;
     animation: wordReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
+  [data-img-reveal] {
+    position: relative;
+    overflow: hidden;
+  }
+  [data-img-reveal] img {
+    opacity: 0;
+    transform: scale(1.12);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  [data-img-reveal]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: theme("colors.primary.700");
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.9s cubic-bezier(0.65, 0, 0.35, 1) 0.12s;
+    pointer-events: none;
+  }
+  [data-img-reveal].img-in-view img {
+    opacity: 1;
+    transform: scale(1);
+  }
+  [data-img-reveal].img-in-view::after {
+    transform: scaleX(0);
+  }
 }
 
 @keyframes wordReveal {
