@@ -23,23 +23,20 @@ jobs:
       - name: Build CSS (Tailwind)
         run: npm run build:css
 
-      - name: Deploy over FTP to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Prepare deploy folder
+        run: |
+          mkdir -p dist
+          cp *.html dist/
+          cp -r assets dist/
+
+      - name: Deploy over SFTP to Hostinger
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
-          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          port: "65002"
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            **/src/**
-            **/.github/**
-            **/.claude/**
-            package.json
-            package-lock.json
-            server.js
-            tailwind.config.js
-            README.md
-            .gitignore
+          local_path: "./dist/*"
+          remote_path: ${{ secrets.FTP_SERVER_DIR }}
+          sftp_only: true
+          delete_remote_files: false
