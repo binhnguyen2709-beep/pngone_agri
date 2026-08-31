@@ -29,14 +29,24 @@ jobs:
           cp *.html dist/
           cp -r assets dist/
 
-      - name: Deploy over SFTP to Hostinger
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
-        with:
-          username: ${{ secrets.FTP_USERNAME }}
-          server: ${{ secrets.FTP_SERVER }}
-          port: "65002"
-          password: ${{ secrets.FTP_PASSWORD }}
-          local_path: "./dist/*"
-          remote_path: "/public_html"
-          sftp_only: true
-          delete_remote_files: false
+      - name: Install lftp
+        run: sudo apt-get update -y && sudo apt-get install -y lftp
+
+      - name: Deploy over SFTP to Hostinger (with auto-retry)
+        timeout-minutes: 15
+        env:
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" -p 65002 sftp://$FTP_SERVER <<'EOF'
+          set sftp:auto-confirm yes
+          set net:max-retries 6
+          set net:reconnect-interval-base 15
+          set net:reconnect-interval-multiplier 1
+          set net:reconnect-interval-max 30
+          set net:timeout 30
+          set mirror:use-pget-n 1
+          mirror -R --verbose --parallel=2 dist public_html
+          bye
+          EOF
