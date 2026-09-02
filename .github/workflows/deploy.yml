@@ -64,16 +64,17 @@ jobs:
           set net:max-retries 3
           set net:reconnect-interval-base 10
           set net:timeout 30
+          set cmd:fail-exit no
           cd public_html
-          -rm -r -f node_modules
-          -rm -r -f src
-          -rm -r -f .github
-          -rm -r -f .claude
-          -rm -f .gitignore
-          -rm -f package.json
-          -rm -f package-lock.json
-          -rm -f server.js
-          -rm -f tailwind.config.js
-          -rm -f README.md
+          rm -r -f node_modules
+          rm -r -f src
+          rm -r -f .github
+          rm -r -f .claude
+          rm -f .gitignore
+          rm -f package.json
+          rm -f package-lock.json
+          rm -f server.js
+          rm -f tailwind.config.js
+          rm -f README.md
           bye
           EOF
