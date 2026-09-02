@@ -43,7 +43,7 @@ jobs:
             echo "SHA_SHORT=${SHA_SHORT}"
             echo "---"
             grep -o 'main\.js[^"]*' dist/index.html || echo "NO MATCH"
-          } > dist/_cachebust-debug.txt
+          } > dist/_cachebust-debug.json
 
       - name: Install lftp
         run: sudo apt-get update -y && sudo apt-get install -y lftp
