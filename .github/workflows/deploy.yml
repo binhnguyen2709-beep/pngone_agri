@@ -48,5 +48,16 @@ jobs:
           set net:timeout 30
           set mirror:use-pget-n 1
           mirror -R --verbose --parallel=2 dist public_html
+          cd public_html
+          -rm -rf node_modules
+          -rm -rf src
+          -rm -rf .github
+          -rm -rf .claude
+          -rm -f .gitignore
+          -rm -f package.json
+          -rm -f package-lock.json
+          -rm -f server.js
+          -rm -f tailwind.config.js
+          -rm -f README.md
           bye
           EOF
