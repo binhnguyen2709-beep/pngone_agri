@@ -39,11 +39,12 @@ jobs:
               -e "s|assets/js/main\.js\"|assets/js/main.js?v=${SHA_SHORT}\"|g" \
               "$f"
           done
-          {
-            echo "SHA_SHORT=${SHA_SHORT}"
-            echo "---"
-            grep -o 'main\.js[^"]*' dist/index.html || echo "NO MATCH"
-          } > dist/_cachebust-debug.json
+          TAG=$(grep -o 'src="assets/js/main\.js[^"]*"' dist/index.html || true)
+          echo "::notice::cache-bust result for dist/index.html main.js tag: ${TAG}"
+          if [[ "$TAG" != *"?v="* ]]; then
+            echo "::error::Cache-bust sed did not modify dist/index.html. SHA_SHORT='${SHA_SHORT}' TAG='${TAG}'"
+            exit 1
+          fi
 
       - name: Install lftp
         run: sudo apt-get update -y && sudo apt-get install -y lftp
