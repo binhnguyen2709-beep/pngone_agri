@@ -56,6 +56,8 @@ jobs:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
+          TAG=$(grep -o 'src="assets/js/main\.js[^"]*"' dist/index.html || true)
+          echo "::notice::right before mirror, dist/index.html main.js tag: ${TAG}"
           lftp -u "$FTP_USERNAME","$FTP_PASSWORD" -p 65002 sftp://$FTP_SERVER <<'EOF'
           set sftp:auto-confirm yes
           set net:max-retries 6
@@ -65,5 +67,8 @@ jobs:
           set net:timeout 30
           set mirror:use-pget-n 1
           mirror -R --verbose --parallel=2 dist public_html
+          get public_html/index.html -o verify-index.html
           bye
           EOF
+          TAG2=$(grep -o 'src="assets/js/main\.js[^"]*"' verify-index.html || true)
+          echo "::notice::right after mirror, remote public_html/index.html main.js tag: ${TAG2}"
