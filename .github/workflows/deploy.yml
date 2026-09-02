@@ -29,6 +29,17 @@ jobs:
           cp *.html dist/
           cp -r assets dist/
 
+      - name: Cache-bust CSS/JS references
+        run: |
+          SHA_SHORT="${GITHUB_SHA::8}"
+          for f in dist/*.html; do
+            sed -i \
+              -e "s|assets/css/styles\.css\"|assets/css/styles.css?v=${SHA_SHORT}\"|g" \
+              -e "s|assets/js/i18n\.js\"|assets/js/i18n.js?v=${SHA_SHORT}\"|g" \
+              -e "s|assets/js/main\.js\"|assets/js/main.js?v=${SHA_SHORT}\"|g" \
+              "$f"
+          done
+
       - name: Install lftp
         run: sudo apt-get update -y && sudo apt-get install -y lftp
 
