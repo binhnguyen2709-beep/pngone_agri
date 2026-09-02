@@ -48,11 +48,27 @@ jobs:
           set net:timeout 30
           set mirror:use-pget-n 1
           mirror -R --verbose --parallel=2 dist public_html
+          bye
+          EOF
+
+      - name: Clean up leftover dev-only files on Hostinger
+        continue-on-error: true
+        timeout-minutes: 10
+        env:
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" -p 65002 sftp://$FTP_SERVER <<'EOF'
+          set sftp:auto-confirm yes
+          set net:max-retries 3
+          set net:reconnect-interval-base 10
+          set net:timeout 30
           cd public_html
-          -rm -rf node_modules
-          -rm -rf src
-          -rm -rf .github
-          -rm -rf .claude
+          -rm -r -f node_modules
+          -rm -r -f src
+          -rm -r -f .github
+          -rm -r -f .claude
           -rm -f .gitignore
           -rm -f package.json
           -rm -f package-lock.json
