@@ -1,7 +1,8 @@
 (function () {
   "use strict";
   var STORAGE_KEY = "pngone-lang";
-  var SUPPORTED = ["en", "vi"];
+  var SUPPORTED = ["en", "vi", "fr", "ar", "es", "zh", "ko"];
+  var RTL_LANGS = ["ar"];
 
   function getInitialLang() {
     var saved = null;
@@ -15,6 +16,7 @@
 
   function applyLang(lang) {
     document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute("dir", RTL_LANGS.indexOf(lang) !== -1 ? "rtl" : "ltr");
 
     document.querySelectorAll("[data-en]").forEach(function (el) {
       var value = el.getAttribute("data-" + lang);
@@ -35,6 +37,9 @@
     document.querySelectorAll(".lang-btn").forEach(function (btn) {
       btn.setAttribute("data-active", btn.getAttribute("data-lang") === lang ? "true" : "false");
     });
+    document.querySelectorAll(".lang-select").forEach(function (sel) {
+      sel.value = lang;
+    });
 
     try {
       localStorage.setItem(STORAGE_KEY, lang);
@@ -49,6 +54,11 @@
     document.querySelectorAll(".lang-btn").forEach(function (btn) {
       btn.addEventListener("click", function () {
         applyLang(btn.getAttribute("data-lang"));
+      });
+    });
+    document.querySelectorAll(".lang-select").forEach(function (sel) {
+      sel.addEventListener("change", function () {
+        applyLang(sel.value);
       });
     });
   });
