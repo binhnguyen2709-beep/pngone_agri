@@ -39,6 +39,8 @@ jobs:
               -e "s|assets/js/main\.js\"|assets/js/main.js?v=${SHA_SHORT}\"|g" \
               "$f"
           done
+          TAG=$(grep -o 'src="assets/js/i18n\.js[^"]*"' dist/index.html || true)
+          echo "::notice::i18n.js tag after cache-bust: ${TAG} (SHA_SHORT=${SHA_SHORT})"
 
       - name: Install lftp
         run: sudo apt-get update -y && sudo apt-get install -y lftp
