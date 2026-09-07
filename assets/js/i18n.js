@@ -1,7 +1,7 @@
 (function () {
   "use strict";
   var STORAGE_KEY = "pngone-lang";
-  var SUPPORTED = ["en", "vi", "fr", "ar", "es", "zh", "ko"];
+  var SUPPORTED = ["en", "vi", "fr", "ar", "es", "zh", "ko", "ru"];
   var RTL_LANGS = ["ar"];
 
   function getInitialLang() {
